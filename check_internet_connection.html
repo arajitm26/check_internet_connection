@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+	<title></title>
+</head>
+<body>
+	
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+   
+<script type="text/javascript">
+
+	// addEventListener version
+	window.addEventListener("offline", (event) => {
+
+	  toastr.error('You have lost your Internet Connection')
+	  console.log("The network connection has been lost.");
+	});
+
+	// onoffline version
+	window.onoffline = (event) => {
+	  console.log("The network connection has been lost.");
+	};
+
+
+	// addEventListener version
+	window.addEventListener("online", (event) => {
+	  toastr.success('Your Connection is Back')
+	  console.log("You are now connected to the network.");
+	});
+
+	// ononline version
+	window.ononline = (event) => {
+	  console.log("You are now connected to the network.");
+	};
+</script>
+</body>
+</html>
